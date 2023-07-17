@@ -1,0 +1,21 @@
+﻿@model Car
+
+
+@*
+ Add Filedset To Show Car
+*@
+
+@{
+    ViewData["Title"] = "Detail";
+}
+<a asp-controller="Car" asp-action="Index"><button class="btn" style="background-color: deeppink">Retour a l'index</button></a>
+
+<fieldset>
+    <legend>@Model.Marque @Model.Modele</legend>
+    <ul>
+        <li>@Model.Couleur</li>
+        <li>@Model.Puissance ch.</li>
+        <li>@Model.Prix €</li>
+    </ul>
+</fieldset>
+

@@ -1,38 +1,29 @@
-﻿@{
-    ViewBag.Title = "title";
-}
+﻿@model Car
 
-@model MVCNETSecuTF.Models.Forms.CreateCarForm
+<a asp-controller="Car" asp-action="Index"><button class="btn" style="background-color: deeppink">Retour a l'index</button></a>
 
-<h1>Create Car</h1>
-
-<!-- Formaulaire de creation de voiture -->
-
-    
-<form asp-controller="Car" asp-action="Create" method="post" style="display: flex; flex-direction: column; align-items:center">
-    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-    
-    <label asp-for="Marque" for="marque"></label>
-    <input type="text" id="marque" asp-for="Marque"/>
+<h1>Create new Car</h1>
+<form method="post" style="display: flex; flex-direction: column; align-items: center">
+    <label asp-for="Marque"></label>
+    <input asp-for="Marque" type="text"/>
     <span asp-validation-for="Marque" class="text-danger"></span>
-
-    <label for="modele">Modele</label>
-    <input type="text" id="modele" asp-for="Modele"/>
+    
+    <label asp-for="Modele"></label>
+    <input asp-for="Modele" type="text"/>
     <span asp-validation-for="Modele" class="text-danger"></span>
-
-    <label for="annee">Année</label>
-    <input type="number" id="annee" asp-for="Annee"/>
-    <span asp-validation-for="Annee" class="text-danger"></span>
-
-    <label for="couleur">Couleur</label>
-    <input type="text" id="couleur" asp-for="Couleur"/>
+    
+    <label asp-for="Couleur"></label>
+    <input asp-for="Couleur" type="text"/>
     <span asp-validation-for="Couleur" class="text-danger"></span>
-
-    <label for="portes">Nombre de portes</label>
-    <input type="number" id="portes" asp-for="Portes"/>
-    <span asp-validation-for="Portes" class="text-danger"></span>
-
-    <button class="btn btn-success">Creer</button>
-
+    
+    <label asp-for="Puissance"></label>
+    <input asp-for="Puissance" type="number"/>
+    <span asp-validation-for="Puissance" class="text-danger"></span>
+    
+    <label asp-for="Prix"></label>
+    <input asp-for="Prix" type="number"/>
+    <span asp-validation-for="Prix" class="text-danger"></span>
+    
+    <button>Creer</button>
 </form>
 

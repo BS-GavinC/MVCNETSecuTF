@@ -1,0 +1,28 @@
+﻿@model Car
+<a asp-controller="Car" asp-action="Index"><button class="btn" style="background-color: deeppink">Retour a l'index</button></a>
+
+<h1>Update @Model.Marque @Model.Modele</h1>
+<form method="post" style="display: flex; flex-direction: column; align-items: center">
+    <label asp-for="Marque"></label>
+    <input asp-for="Marque" type="text"/>
+    <span asp-validation-for="Marque" class="text-danger"></span>
+    
+    <label asp-for="Modele"></label>
+    <input asp-for="Modele" type="text"/>
+    <span asp-validation-for="Modele" class="text-danger"></span>
+    
+    <label asp-for="Couleur"></label>
+    <input asp-for="Couleur" type="text"/>
+    <span asp-validation-for="Couleur" class="text-danger"></span>
+    
+    <label asp-for="Puissance"></label>
+    <input asp-for="Puissance" type="number"/>
+    <span asp-validation-for="Puissance" class="text-danger"></span>
+    
+    <label asp-for="Prix"></label>
+    <input asp-for="Prix" type="number"/>
+    <span asp-validation-for="Prix" class="text-danger"></span>
+    
+    <button>Update</button>
+</form>
+
